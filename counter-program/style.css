@@ -28,13 +28,13 @@ body {
 }
 
 #increase {
-    left: 20%;
+    top: 50%;
 }
 
 #reset {
-    left: 50%;
+    top: 65%;
 }
 
 #decrease {
-    left: 80%;
+    top: 80%;
 }
