@@ -4,48 +4,21 @@
     box-sizing: border-box;
 }
 
-/*
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    line-height: 1.7;
-}
-*/
-
 body {
     font-size: 14pt;
-    line-height: 1.666;
-    font-family: sans-serif;
+    line-height: 1.7;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     max-width: 40em;
     margin: 1em auto 1em;
-    padding: 0.666em;
-    border: 1px dashed #8da0b7;
+    padding: 1em;
+    border: 1px dashed;
 }
 
-.logo {
-    width: 100px;
-    height: 100px;
-    image-rendering: pixelated;
+h2 {
+    font-family: sans-serif;
 }
-
-/*
-.screen {
-    margin: 1% 0;
-    padding: 1rem;
-    width: 97.5vh;
-    height: auto;
-    border: .5px dashed;
-    box-shadow: 0 0 0 rgba(0,0,0,.1);
-}
-*/
 
 ul {
-    list-style-type: disc;
     margin-block: 1em;
-    padding-inline-start: 40px;
-    unicode-bidi: isolate;
+    padding-left: 50px;
 }
