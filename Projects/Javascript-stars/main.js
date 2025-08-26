@@ -12,7 +12,3 @@ for (let i=0;i<count;i++){
     star.style.opacity = Math.random();
     screen_el.appendChild(star);
 }
-
-// const el = document.querySelector('star');
-// console.log(el.parentNode);
-// console.log(el.parentElement)
