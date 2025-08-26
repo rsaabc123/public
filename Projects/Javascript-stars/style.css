@@ -19,7 +19,7 @@ body {
     color: #fff;
     outline: 1px solid #fff;
     padding: .4rem;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 #screen {
@@ -38,4 +38,5 @@ body {
     position: absolute;
     background-color: #fff;
     border-radius: 50%;
+
 }
