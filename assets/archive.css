@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-/*     outline: 1px solid red; */
+    /* outline: 1px solid red; */
 }
 
 body {
@@ -11,7 +11,7 @@ body {
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Urbanist','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #111;
     color: #fff;
 }
@@ -32,7 +32,6 @@ body {
     margin: 0 0 3rem 0;
     text-decoration: underline;
     animation: archive-animation .8s ease-in-out;
-    backface-visibility: hidden;
 }
 
 details {
@@ -40,7 +39,6 @@ details {
     padding: 1rem 0 1rem 0;
     cursor: pointer;
     animation: archive-animation .8s ease-in-out;
-    backface-visibility: hidden;
 }
 
 a {
@@ -63,5 +61,4 @@ a:hover {
     100% {
         opacity: 1;
     }
-
 }
