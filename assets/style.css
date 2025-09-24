@@ -31,6 +31,7 @@ body {
     margin: 2rem 0 2rem 0;
     text-align: center;
     font-size: 2.5rem;
+    animation: main-page-fadeIn .8s ease-in-out;
 }
 
 .subtitle {
@@ -38,6 +39,11 @@ body {
     text-align: center;
     font-size: .75rem;
     color: #a292f4;
+    animation: main-page-fadeIn .8s ease-in-out;
+}
+
+.faGithubContainer {
+    animation: main-page-fadeIn .8s ease-in-out;
 }
 
 .fa-brands.fa-github {
@@ -52,6 +58,7 @@ body {
     grid-template-rows: 1fr 1fr;
     gap: 1.5rem;
     margin: 1rem 0 0 0;
+    animation: main-page-fadeIn .8s ease-in-out;
 }
 
 a {
@@ -93,6 +100,15 @@ a:hover {
 
 .archive-hover:hover {
     color: #d2e791;
+}
+
+@keyframes main-page-fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /*about.html*/
@@ -221,4 +237,5 @@ a:hover {
 }
 
 /* --> archive.css
+
 */
