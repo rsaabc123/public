@@ -43,6 +43,7 @@ body {
 }
 
 .faGithubContainer {
+    transition: .3s;
     animation: main-page-fadeIn .8s ease-in-out;
 }
 
@@ -76,6 +77,10 @@ a:hover {
     text-align: center;
     outline: 1px solid;
     border-radius: 8px;
+}
+
+.faGithubContainer:hover {
+    transform: translateY(-6px);
 }
 
 .github-hover:hover {
@@ -239,3 +244,4 @@ a:hover {
 /* --> archive.css
 
 */
+
