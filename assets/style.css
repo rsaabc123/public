@@ -126,6 +126,18 @@ a:hover {
     }
 }
 
+@media (min-width: 1024px) {
+    .about-container {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .about-container {
+        width: 40%;
+    }
+}
+
 @keyframes about-animation {
     0% {
         opacity: 0;
@@ -227,3 +239,4 @@ a:hover {
 /* --> archive.css
 
 */
+
