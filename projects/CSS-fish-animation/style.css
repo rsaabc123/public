@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #d0e9ee;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    bottom: -30px;
+    width: 300px;
+    height: 300px;
+}
+
+.table {
+    position: absolute;
+    bottom: 0;
+    width: 250px;
+    height: 5px;
+    border: 1px solid #5983a2;
+    border-radius: 10px;
+    background-color: #5983a2;
+}
+
+.bowl {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    border: 5px solid #5983a2;
+    border-radius: 25px 25px 100px 100px / 80px 80px 150px 150px;
+    overflow: hidden;
+}
+
+.water {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 95%;
+    opacity: .5;
+    background-color: #b7e2e3;
+}
+
+.water::before {
+    content: '';
+    position: absolute;
+    bottom: -140px;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 500px;
+    height: 500px;
+    border-radius: 45%;
+    background-color: white;
+    animation: waterwave 10s linear infinite;
+}
+
+.algae {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background: #6dd69b;
+    background: linear-gradient(0deg, rgba(109, 214, 155, 1) 0%, rgba(133, 255, 218, 1) 74%);
+}
+
+.fish{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    animation: bob 3s ease-in-out infinite;
+}
+
+.body {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 55px;
+    height: 45px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #cfb883;
+}
+
+.eye_left {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 1.5px;
+    height: 1.5px;
+    border-radius: 50%;
+    background-color: #000;
+    animation: blink 5s infinite;
+}
+
+.eye_right {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 1.5px;
+    height: 1.5px;
+    border-radius: 50%;
+    background-color: #000;
+    animation: blink 5s infinite;
+}
+
+.mouth{
+    position: absolute;
+    font-size: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    top: 17px;
+    left: 4.5px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(270deg);
+}
+
+.fin{
+    position: absolute;
+    top: -10%;
+    left: 25%;
+    width: 25px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: rgb(231, 234, 159);
+    z-index: -1;
+}
+
+.tail{
+    position: absolute;
+    top: 25%;
+    right: -10%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: rgb(231, 234, 159);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.4;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes waterwave {
+    100% {
+        transform: translate(-50%, -60%) rotate(360deg);
+    }
+}
+
+@keyframes bob {
+    0%, 100%{
+        transform: translate(-50%, -50%);
+    }
+    50%{
+        transform: translate(-50%, -40%);
+    }
+}
+
+@keyframes blink {
+    0%, 90%, 100% {
+        transform: scaleY(1);
+    }
+    95% {
+        transform: scaleY(0.1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        transform: translateY(-150px) scale(0.7);
+    }
+}
