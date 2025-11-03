@@ -13,7 +13,7 @@ function updateLampDisplay() {
         bulb.style.opacity = '1';
         bulb.style.backgroundColor = currentColor;
         bulb.style.boxShadow = `0 0 20px 5px ${currentColor}`;
-        lampHead.style.boxShadow = `0 0 20px 20px ${currentColor}`;
+        lampHead.style.boxShadow = `0 0 20px 10px ${currentColor}`;
         lampHead.style.opacity = '0.1';
     }
     
@@ -37,5 +37,6 @@ colorSelect.addEventListener('change', () => {
   currentColor = colorSelect.value;
   if (isLampOn) updateLampDisplay();
 });
+
 
 updateLampDisplay();
