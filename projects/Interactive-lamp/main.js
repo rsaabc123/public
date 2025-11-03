@@ -13,8 +13,9 @@ function updateLampDisplay() {
         bulb.style.opacity = '1';
         bulb.style.backgroundColor = currentColor;
         bulb.style.boxShadow = `0 0 20px 5px ${currentColor}`;
-        lampHead.style.boxShadow = `0 0 20px 10px ${currentColor}`;
-        lampHead.style.opacity = '0.1';
+        // lampHead.style.boxShadow = `0 0 20px 10px ${currentColor}`;
+        lampHead.style.border = ` 1px solid ${currentColor}`;
+        lampHead.style.opacity = '0.3';
     }
     
     else {       
@@ -22,7 +23,8 @@ function updateLampDisplay() {
         bulb.style.opacity = '0.1';
         bulb.style.backgroundColor = '#fff';
         bulb.style.boxShadow = 'none';
-        lampHead.style.boxShadow = 'none';
+        // lampHead.style.boxShadow = 'none';
+        lampHead.style.border = 'none';
     }
 }
 
@@ -37,6 +39,5 @@ colorSelect.addEventListener('change', () => {
   currentColor = colorSelect.value;
   if (isLampOn) updateLampDisplay();
 });
-
 
 updateLampDisplay();
