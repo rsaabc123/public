@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1S5QZFTPF"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-F1S5QZFTPF');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive-lamp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lamp">
+            <div class="top"></div>
+            <div class="lamp-head"></div>
+            <div class="bottom"></div>
+            <div class="bulb"></div>
+        </div>
+ 
+        <div class="control">
+            <div class="switch">On</div>
+            <select name="colors" id="colors" onchange="changeColor()">
+                <option value="#fff">White</option>
+                <option value="#ff7779">Red</option>
+                <option value="#d5ff87">Green</option>
+                <option value="#89cff0">Blue</option>
+            </select>
+        </div>
+    <script src="main.js"></script>
+</body>
+</html>
