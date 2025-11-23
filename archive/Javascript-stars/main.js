@@ -1,6 +1,6 @@
 let count = 200;
 
-const screen_el = document.getElementById('screen')
+const screen_el = document.querySelector('.screen')
 
 for (let i=0;i<count;i++){
     const star = document.createElement('div');
