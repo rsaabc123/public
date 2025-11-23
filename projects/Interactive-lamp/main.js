@@ -1,5 +1,5 @@
 const switchBtn = document.querySelector('.switch');
-const colorSelect = document.getElementById('colors');
+const colorSelect = document.querySelector('#colors');
 const bulb = document.querySelector('.bulb');
 const lampHead = document.querySelector('.lamp-head');
 const switchSound = new Audio('light-switch.wav');
@@ -41,3 +41,4 @@ colorSelect.addEventListener('change', () => {
 });
 
 updateLampDisplay();
+
