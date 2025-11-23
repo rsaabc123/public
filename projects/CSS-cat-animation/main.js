@@ -1,6 +1,6 @@
 let star_count = 200;
 
-const container_el = document.getElementsByClassName('container')[0];
+const container_el = document.querySelector('.container');
 
 for (let i=0;i<star_count;i++){
     const star = document.createElement('div');
@@ -11,4 +11,5 @@ for (let i=0;i<star_count;i++){
     star.style.height = Math.random()*2+'px';
     star.style.opacity = Math.random();
     container_el.appendChild(star);
+
 }
