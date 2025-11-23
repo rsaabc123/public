@@ -1,7 +1,7 @@
 let bubble_count = 15;
 
-const container_el = document.getElementsByClassName('container')[0];
-const bowl_el = document.getElementsByClassName('bowl')[0];
+const container_el = document.querySelector('.container');
+const bowl_el = document.querySelector('.bowl');
 
 for (let i=0;i<bubble_count;i++){
     const bubble = document.createElement('div');
