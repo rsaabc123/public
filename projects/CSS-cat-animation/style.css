@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background: radial-gradient(
         85vw 60vh at 90% -5%,
         #282949 0%,
@@ -356,4 +356,5 @@ body {
     75% {
         transform: rotate(-10deg);
     }
+
 }
