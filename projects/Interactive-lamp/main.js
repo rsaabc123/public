@@ -7,7 +7,7 @@ const switchSound = new Audio('light-switch.wav');
 let isLampOn = true;
 let currentColor = '#fff';
 
-function updateLampDisplay() {
+const updateLampDisplay = () => {
     if (isLampOn) {
         switchBtn.textContent = 'On';
         bulb.style.opacity = '1';
@@ -41,4 +41,3 @@ colorSelect.addEventListener('change', () => {
 });
 
 updateLampDisplay();
-
