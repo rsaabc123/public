@@ -287,6 +287,12 @@ button:hover {
     transform: translateY(-2px);
 }
 
+button.active {
+    background: #4ea0ff;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(102, 163, 234, 1);
+}
+
 button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
