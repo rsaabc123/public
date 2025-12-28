@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1S5QZFTPF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-F1S5QZFTPF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AC-Simulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="unit-wrap">
+      <div class="ac-unit">
+        <div class="emoji-display">☃️</div>
+        <div class="temp-display">
+          <div class="degree-display1">72°F</div>
+          <div class="mode-display">COOL</div>
+        </div>
+
+        <div class="face">
+          <div class="eye">
+            <div class="pupil"></div>
+          </div>
+          <div class="eye">
+            <div class="pupil"></div>
+          </div>
+        </div>
+
+        <div class="grill">
+          <div class="fan-1">
+            <div class="blade"></div>
+          </div>
+        </div>
+
+        <div class="airflow cool">
+          <div class="stream s1"></div>
+          <div class="stream s2"></div>
+          <div class="stream s3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <h2>- Controls -</h2>
+      <div class="row">
+        <div class="temp-display2">72°F</div>
+        <button class="TempChangebtn">+</button>
+        <button class="TempChangebtn">-</button>
+      </div>
+
+      <div class="row">
+        <button class="Powerbtn">Power: ON</button>
+      </div>
+
+      <div class="row">
+        <div class="label">Mode</div>
+        <button class="Modebtn" data-mode="cool">Cool</button>
+        <button class="Modebtn" data-mode="heat">Heat</button>
+        <button class="Modebtn" data-mode="fan">Fan</button>
+      </div>
+
+      <div class="row">
+        <div class="label">Fan Speed</div>
+        <button class="FanSpeedbtn" data-speed="1">1</button>
+        <button class="FanSpeedbtn" data-speed="2">2</button>
+        <button class="FanSpeedbtn" data-speed="3">3</button>
+        <button class="FanSpeedbtn" data-speed="4">4</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="main.js"></script>
+</html>

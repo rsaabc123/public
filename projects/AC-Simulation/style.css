@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid rebeccapurple; */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #eef7fb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 18px;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 18px;
+    background: #eaf6fe;
+    box-shadow: 0 8px 20px rgba(19,40,60,0.08);
+    padding: 20px;
+}
+
+.unit-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+.ac-unit {
+    position: relative;
+    width: 300px;
+    border-radius: 14px;
+    background: #def0ff;
+    padding: 18px;
+    border: 1px solid rgba(129,164,189,0.12);
+}
+
+.emoji-display {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 25%;
+    border: 1px solid rgba(22, 19, 113, 0.1);
+}
+
+.temp-display {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    right: 10px;
+    top: 10px;
+    width: 85px;
+    height: 45px;
+    border-radius: 10px;
+    background: #093b61;
+    color: #fff;
+}
+
+/**
+.degree-display1 {
+}
+**/
+
+.mode-display {
+    font-size: 13px;
+    color: #9ccfea;
+}
+
+.face {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    gap: 26px;
+}
+
+.eye {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #fff;
+    animation: blink 3s ease-in-out infinite;
+}
+
+.pupil {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #000;
+}
+
+@keyframes blink {
+    0%, 90%, 100% {
+        transform: scaleY(1);
+    }
+    95% {
+        transform: scaleY(0.1);
+    }
+}
+
+.grill {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 14px;
+}
+
+.fan-1 {
+    position: relative;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: #cde8ff;
+    border: 3px solid rgba(17, 72, 120, .07);
+    box-shadow: 0 6px 18px rgba(17, 72, 120, .05) inset;
+}
+
+.blade {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right,#fff,#d0eaff);
+    border-radius: 10px;
+    animation: spin .5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.airflow {
+    position: absolute;
+    bottom: 3px;
+    left: 20px;
+    right: 20px;
+    height: 60px;
+}
+
+.stream {
+    position: absolute;
+    width: 18%;
+    height: 100%;
+    border-radius: 20px;
+    animation: flow 1.6s ease-in-out infinite;
+}
+
+.stream.s1 {
+    left: 10%;
+    animation-delay: .0s;
+}
+
+.stream.s2 {
+    left: 40%;
+    animation-delay: .2s;
+}
+
+.stream.s3 {
+    left: 70%;
+    animation-delay: .4s;
+}
+
+.airflow.cool .stream {
+    background: linear-gradient(to bottom, rgba(44, 153, 255, 0.55), rgba(58, 161, 255, .05));
+}
+
+.airflow.heat .stream {
+    background: linear-gradient(to bottom, rgba(254, 101, 127, 0.55), rgba(137, 77, 21, .05));
+}
+
+.airflow.fan .stream {
+    background: linear-gradient(to bottom, rgba(60, 200, 80, 0.55), rgba(105, 255, 128, .05));
+}
+
+@keyframes flow {
+    0% {
+        transform: translateY(12px) scaleY(.8);
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1;
+        transform: translateY(0) scaleY(1)
+    }
+
+    80% {
+        opacity: .7
+    }
+
+    100% {
+        transform: translateY(12px) scaleY(.8);
+    }
+}
+
+.controls h2 {
+    margin: 0 0 15px 0;
+    color: #133d62;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0 5px 0;
+    flex-wrap: wrap;
+}
+
+.temp-display2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 10px 0;
+    width: 100px;
+    height: 80px;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    font-size: 25px;
+}
+
+.label {
+    width: 100%;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px 0 0;
+    background: #fff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.TempChangebtn, .FanSpeedbtn {
+    width: 30px;
+    height: 30px;
+}
+
+.Powerbtn {
+    margin: 5px 0 0 0;
+    width: 80px;
+    height: 30px;
+}
+
+.Modebtn {
+    width: 50px;
+    height: 30px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.controls.power-off button:not(.Powerbtn) {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.ac-unit.is-off {
+    opacity: 0.5;
+}
+
+.ac-unit.is-off .blade {
+    animation-play-state: paused;
+}
+
+.ac-unit.is-off .stream {
+    animation-play-state: paused;
+}
+
+.ac-unit.is-off .eye {
+    animation-play-state: paused;
+    transform: scaleY(0.15);
+    height: 2px;
+    width: 30px;
+    border-radius: 0;
+    background: #000;
+}
+
+.ac-unit.is-off .pupil {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .unit-wrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    .controls {
+        text-align: center;
+    }
+
+    .row {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 320px) {
+    .ac-unit {
+        width: calc(100% - 36px);
+        max-width: 300px;
+    }
+}
