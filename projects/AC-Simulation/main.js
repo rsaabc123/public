@@ -18,8 +18,13 @@ const max_temp = 80;
 const min_temp = 60;
 
 const updateTemperature = () => {
-    degDisplay1.textContent = `${temperature}°F`;
-    degDisplay2.textContent = `${temperature}°F`;
+    if (mode === 'fan') {
+        degDisplay1.textContent = '-';
+        degDisplay2.textContent = '-';
+    } else {
+        degDisplay1.textContent = `${temperature}°F`;
+        degDisplay2.textContent = `${temperature}°F`;
+    }
 };
 
 const updateMode = () => {
@@ -38,6 +43,12 @@ const updateFanSpeed = () => {
     document.querySelectorAll('.blade').forEach(blade => {
         blade.style.animationDuration = `${0.6 - fanSpeed * 0.1}s`;
     });
+};
+
+const updateButtons = () => {
+    tempBtns.forEach(btn => btn.disabled = !isOn || mode === 'fan');
+    modeBtns.forEach(btn => btn.disabled = !isOn);
+    fanSpeedBtns.forEach(btn => btn.disabled = !isOn);
 };
 
 powerBtn.addEventListener('click', () => {
@@ -61,48 +72,31 @@ powerBtn.addEventListener('click', () => {
         modeDisplay.textContent = '-';
         emojiDisplay.textContent = '-';
     }
-    
-    tempBtns.forEach(btn => btn.disabled = !isOn);
-    modeBtns.forEach(btn => btn.disabled = !isOn);
-    fanSpeedBtns.forEach(btn => btn.disabled = !isOn);
+    updateButtons();
 });
 
 tempBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        if (!isOn || btn.disabled) {
-            e.preventDefault();
-            e.stopPropagation();
-            return;
-        }
-        if (btn.textContent === '+') {
-            if (temperature < max_temp) temperature++;
-        }
-        if (btn.textContent === '-') {
-            if (temperature > min_temp) temperature--;
-        }
+        if (!isOn || mode === 'fan') return;
+        if (btn.textContent === '+' && temperature < 80) temperature++;
+        if (btn.textContent === '-' && temperature > 60) temperature--;
         updateTemperature();
     });
 });
 
 modeBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        if (!isOn || btn.disabled) {
-            e.preventDefault();
-            e.stopPropagation();
-            return;
-        }
+        if (!isOn || btn.disabled) return;
         mode = btn.dataset.mode;
         updateMode();
+        updateTemperature();
+        updateButtons();
     });
 });
 
 fanSpeedBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        if (!isOn || btn.disabled) {
-            e.preventDefault();
-            e.stopPropagation();
-            return;
-        }
+        if (!isOn || btn.disabled) return;
         fanSpeed = parseInt(btn.dataset.speed);
         updateFanSpeed();
     });
@@ -111,7 +105,4 @@ fanSpeedBtns.forEach(btn => {
 updateTemperature();
 updateMode();
 updateFanSpeed();
-
-tempBtns.forEach(btn => btn.disabled = !isOn);
-modeBtns.forEach(btn => btn.disabled = !isOn);
-fanSpeedBtns.forEach(btn => btn.disabled = !isOn);
+updateButtons();
