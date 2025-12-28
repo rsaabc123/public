@@ -264,6 +264,7 @@ button {
     box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
     cursor: pointer;
     transition: .2s;
+    touch-action: manipulation;
 }
 
 .TempChangebtn, .FanSpeedbtn {
