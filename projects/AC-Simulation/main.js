@@ -49,6 +49,16 @@ const updateButtons = () => {
     tempBtns.forEach(btn => btn.disabled = !isOn || mode === 'fan');
     modeBtns.forEach(btn => btn.disabled = !isOn);
     fanSpeedBtns.forEach(btn => btn.disabled = !isOn);
+    
+    modeBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.mode === mode && isOn);
+    });
+    
+    fanSpeedBtns.forEach(btn => {
+        btn.classList.toggle('active', parseInt(btn.dataset.speed) === fanSpeed && isOn);
+    });
+    
+    powerBtn.classList.toggle('active', isOn);
 };
 
 powerBtn.addEventListener('click', () => {
@@ -99,6 +109,7 @@ fanSpeedBtns.forEach(btn => {
         if (!isOn || btn.disabled) return;
         fanSpeed = parseInt(btn.dataset.speed);
         updateFanSpeed();
+        updateButtons();
     });
 });
 
