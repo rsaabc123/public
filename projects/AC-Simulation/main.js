@@ -76,7 +76,7 @@ powerBtn.addEventListener('click', () => {
 });
 
 tempBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', () => {
         if (!isOn || mode === 'fan') return;
         if (btn.textContent === '+' && temperature < 80) temperature++;
         if (btn.textContent === '-' && temperature > 60) temperature--;
@@ -85,7 +85,7 @@ tempBtns.forEach(btn => {
 });
 
 modeBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', () => {
         if (!isOn || btn.disabled) return;
         mode = btn.dataset.mode;
         updateMode();
@@ -95,7 +95,7 @@ modeBtns.forEach(btn => {
 });
 
 fanSpeedBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', () => {
         if (!isOn || btn.disabled) return;
         fanSpeed = parseInt(btn.dataset.speed);
         updateFanSpeed();
