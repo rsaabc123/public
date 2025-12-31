@@ -1,7 +1,7 @@
 const acUnit = document.querySelector('.ac-unit');
 const powerBtn = document.querySelector('.Powerbtn');
 const degDisplay1 = document.querySelector('.degree-display1');
-const degDisplay2 = document.querySelector('.temp-display2');
+const degDisplay2 = document.querySelector('.degree-display2');
 const tempBtns = document.querySelectorAll('.TempChangebtn');
 const modeBtns = document.querySelectorAll('.Modebtn');
 const fanSpeedBtns = document.querySelectorAll('.FanSpeedbtn');
@@ -117,3 +117,4 @@ updateTemperature();
 updateMode();
 updateFanSpeed();
 updateButtons();
+
