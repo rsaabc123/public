@@ -27,12 +27,15 @@ body {
 .bubble {
     position: absolute;
     border-radius: 50%;
-    opacity: .7;
 }
 
 @keyframes float {
     0% {
         transform: translateY(0);
+        opacity: 0;
+    }
+
+    20% {
         opacity: .7;
     }
 
