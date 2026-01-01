@@ -31,7 +31,7 @@ const createBubble = (count = 5) => {
 }
 
 const bubbleLoop = () => {
-    createBubble(25);
+    createBubble(15);
     setTimeout(bubbleLoop, 200);
 }
 
