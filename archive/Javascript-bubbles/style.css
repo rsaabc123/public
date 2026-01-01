@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* filter: blur(1px); */
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: .7;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: .7;
+    }
+
+    75% {
+        opacity: .65;
+    }
+
+    90% {
+        opacity: .5;
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
