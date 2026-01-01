@@ -7,7 +7,7 @@ const getRandomColor = () => {
     return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 };
 
-const createBubble = (count = 5) => {
+const createBubble = (count=1) => {
     for (let i=0;i<count;i++) {
         const bubble = document.createElement('div');
         bubble.classList.add('bubble');
@@ -17,12 +17,14 @@ const createBubble = (count = 5) => {
         bubble.style.height = `${size}px`;
 
         bubble.style.left = `${Math.random() * (window.innerWidth - size)}px`;
-        bubble.style.bottom = `-10px`;
+        bubble.style.bottom = `0px`;
         bubble.style.background = getRandomColor();
 
         const duration = Math.random()*5+5;
         const delay = Math.random()*2;
         bubble.style.animation = `float ${duration}s linear ${delay}s forwards`;
+
+        bubble.style.opacity = '0';
 
         container.appendChild(bubble);
 
@@ -31,7 +33,7 @@ const createBubble = (count = 5) => {
 }
 
 const bubbleLoop = () => {
-    createBubble(15);
+    createBubble(10);
     setTimeout(bubbleLoop, 200);
 }
 
