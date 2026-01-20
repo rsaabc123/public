@@ -193,7 +193,7 @@ a:hover {
 }
 
 .dependencies-container {
-    width: 85%;
+    width: 65%;
 }
 
 .dependencies {
@@ -214,7 +214,6 @@ a:hover {
 .category {
     margin: .5rem 0 .5rem 0;
     font-size: 1.2rem;
-    text-decoration: underline;
 }
 
 .dependencies-item {
@@ -239,6 +238,7 @@ a:hover {
 /* --> archive.css
 
 */
+
 
 
 
