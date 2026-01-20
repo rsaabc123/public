@@ -45,7 +45,7 @@ a {
     display: block;
     margin: 1rem 0 1rem 0;
     /* color: #feaf41; */
-    color: #ffd79e;
+    color: #d9ffd7;
     text-decoration: none;
     transition: .3s;
 }
@@ -63,5 +63,6 @@ a:hover {
         opacity: 1;
     }
 }
+
 
 
