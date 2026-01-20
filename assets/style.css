@@ -38,7 +38,7 @@ body {
     margin: 5px 0 5px 0;
     text-align: center;
     font-size: .75rem;
-    color: #a292f4;
+    color: #44606a;
     animation: main-page-fadeIn .8s ease-in-out;
 }
 
@@ -239,4 +239,5 @@ a:hover {
 /* --> archive.css
 
 */
+
 
