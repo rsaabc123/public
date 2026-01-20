@@ -78,19 +78,19 @@ a:hover {
 }
 
 .github-wrapper:hover {
-    color: #f4b5d2;
+    color: #cefeff;
 }
 
 .fa-brands.fa-github:hover {
-    color: #f4b5d2;
+    color: #cefeff;
 }
 
 .about-hover:hover {
-    color: #f38b8b;
+    color: #98e8f1;
 }
 
 .projects-hover:hover {
-    color: #efbe8e;
+    color: #9ec0f5;
 }
 
 .dependencies-hover:hover {
@@ -98,7 +98,7 @@ a:hover {
 }
 
 .archive-hover:hover {
-    color: #d2e791;
+    color: #bef8ab;
 }
 
 @keyframes main-page-fadeIn {
@@ -239,5 +239,6 @@ a:hover {
 /* --> archive.css
 
 */
+
 
 
