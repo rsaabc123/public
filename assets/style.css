@@ -173,6 +173,12 @@ a:hover {
     outline: 1px inset #d0eed9;
 }
 
+@media (max-width: 375px) {
+    .projects-container {
+        gap: 1rem;
+    }
+}
+
 @keyframes projects-animation {
     0% {
         opacity: 0;
@@ -238,6 +244,7 @@ a:hover {
 /* --> archive.css
 
 */
+
 
 
 
