@@ -25,6 +25,37 @@ body {
     text-decoration: none;
 }
 
+/*homepage*/
+
+.toHomebtn {
+    position: absolute;
+    /**/
+    top: 17%;
+    /**/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform .3s;
+    padding: .2rem .3rem .2rem .2rem;
+    border: 1px solid rgb(255, 255, 255, .1);
+    color: rgb(255, 255, 255, .7);
+    animation: toHomebtn-animation 2s forwards;
+    animation-delay: .3s;
+    opacity: 0;
+}
+
+.toHomebtn:hover {
+    transform: translate(-50%, -50%) translateY(-6px);
+}
+
+@keyframes toHomebtn-animation {
+    0%, 25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /*index.html*/
 
 .title {
@@ -244,13 +275,3 @@ a:hover {
 /* --> archive.css
 
 */
-
-
-
-
-
-
-
-
-
-
