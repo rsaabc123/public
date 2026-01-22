@@ -25,28 +25,47 @@ body {
     text-decoration: none;
 }
 
-/*homepage*/
+/*nav*/
 
-.toHomebtn {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: transform .3s;
-    padding: .2rem .3rem .2rem .2rem;
-    border: 1px solid rgb(255, 255, 255, .1);
-    color: rgb(255, 255, 255, .7);
-    animation: toHomebtn-animation 2s forwards;
-    animation-delay: .3s;
-    opacity: 0;
+nav {
+    position: fixed;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    animation: nav-animation 1s;
 }
 
-.toHomebtn:hover {
-    transform: translate(-50%, -50%) translateY(-6px);
+.nav-menu {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
 }
 
-@keyframes toHomebtn-animation {
-    0%, 25% {
+.nav-item {
+    color: #ceffe9;
+    transition: .3s;
+}
+
+.nav-item:hover {
+    transform: translateY(-6px);
+}
+
+@media (max-width: 425px) {
+    .nav-menu {
+        font-size: 14px;
+    }
+    .nav-menu {
+        gap: .5rem;
+    }
+}
+
+@keyframes nav-animation {
+    0% {
         opacity: 0;
     }
     100% {
@@ -70,7 +89,7 @@ details {
     animation: archive-animation .8s ease-in-out;
 }
 
-a {
+details a {
     display: block;
     margin: 1rem 0 1rem 0;
     /* color: #feaf41; */
@@ -79,9 +98,17 @@ a {
     transition: .3s;
 }
 
+a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: .3s;
+}
+
 a:hover {
     transform: translateY(-6px);
 }
+
 
 @keyframes archive-animation {
     0% {
