@@ -30,19 +30,14 @@ body {
 nav {
     position: fixed;
     top: 5%;
-    left: 0;
-    width: 100%;
     animation: nav-animation 1s;
 }
 
 .nav-menu {
-    width: 100%;
-    list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    margin: 0;
+    list-style-type: none;
     gap: 1rem;
 }
 
@@ -112,4 +107,5 @@ a:hover {
         opacity: 1;
     }
 }
+
 
