@@ -55,9 +55,6 @@ nav {
     .nav-menu {
         font-size: 14px;
     }
-    .nav-menu {
-        gap: .5rem;
-    }
 }
 
 @keyframes nav-animation {
@@ -115,3 +112,4 @@ a:hover {
         opacity: 1;
     }
 }
+
