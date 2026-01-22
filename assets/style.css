@@ -30,19 +30,29 @@ body {
 nav {
     position: fixed;
     top: 5%;
-    animation: nav-animation 1s;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
 }
 
 .nav-menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    list-style-type: none;
     gap: 1rem;
+    margin: 0 2rem 0 2rem;
+    list-style-type: none;
+    animation: nav-animation 1s;
 }
 
 .nav-item {
-    color: #ceffe9;
+    padding: .25rem 0 .25rem 0;
+    color: #b6ffde;
+}
+
+nav a:hover {
+    color: #e9fff5;
+    transform: none;
+    scale: 1.1;
     transition: .3s;
 }
 
@@ -317,5 +327,3 @@ a:hover {
 /* --> archive.css
 
 */
-
-
