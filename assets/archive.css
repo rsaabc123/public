@@ -51,10 +51,6 @@ nav {
     transition: .3s;
 }
 
-.nav-item:hover {
-    transform: translateY(-6px);
-}
-
 @media (max-width: 425px) {
     .nav-menu {
         font-size: 14px;
