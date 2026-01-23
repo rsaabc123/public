@@ -198,8 +198,8 @@ a:hover {
 /*projects.html*/
 
 .projects-title {
-    font-size: 1.5rem;
     margin: 0 0 2rem 0;
+    font-size: 1.5rem;
     text-decoration: underline;
     animation: projects-animation .8s ease-in-out;
 }
@@ -239,8 +239,8 @@ a:hover {
 /*dependencies.html*/
 
 .dependencies-title {
-    font-size: 1.5rem;
     margin: 2.5rem 0 2.5rem 0;
+    font-size: 1.5rem;
     text-decoration: underline;
     animation: dependencies-animation .8s ease-in-out;
 }
@@ -251,34 +251,37 @@ a:hover {
     grid-template-rows: auto;
     gap: 1rem;
     width: 60%;
-    max-width: 600px;
 }
 
 .dependencies {
-    margin: 0;
-    padding: .5em;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 0 1px #8393a2;
     animation: dependencies-animation .8s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+}
+
+.category {
+    margin: 1rem 0 .1rem 0;
+    font-size: 1rem;
 }
 
 .dependencies-item {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: .9rem 0 1rem 0;
+    font-size: .9rem;
 }
 
 .dependencies-item ul {
-    margin: 0;
-    padding: 0;
+    list-style-type: none;
 }
 
 .dependencies-item ul li {
-    margin: .1rem 0 .1rem 0;
+    margin: .2rem 0 .2rem 0;
 }
 
 @media (min-width: 600px) {
@@ -295,22 +298,8 @@ a:hover {
 
 @media (min-width: 1024px) {
     .dependencies-container {
-        width: 30%;
+        width: 23%;
     }
-}
-
-.category {
-    margin: .3rem 0 .3rem 0;
-    font-size: 1rem;
-}
-
-.dependencies-item {
-    margin: .5rem 0 .5rem 0;
-    font-size: .9rem;
-}
-
-.dependencies-item ul {
-    list-style-type: none;
 }
 
 @keyframes dependencies-animation {
