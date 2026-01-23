@@ -62,15 +62,23 @@ nav a.active {
     color: #fff;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 600px) {
     .nav-menu {
         font-size: 14px;
+        gap: .5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-menu {
+        font-size: 12px;
+        gap: .4rem;
     }
 }
 
 @media (min-width: 768px) {
-    .nav-item {
-        margin: 0 .5rem 0 .5rem;
+    .nav-menu {
+        gap: 3rem;
     }
 }
 
@@ -177,6 +185,12 @@ a:hover {
     line-height: 1.7;
     outline: 1px solid #bbfcd5;
     animation: about-animation .8s ease-in-out;
+}
+
+@media (max-width: 400px) {
+    .about-container {
+        font-size: 14px;
+    }
 }
 
 @media (min-width: 768px) {
