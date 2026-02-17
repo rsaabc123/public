@@ -168,6 +168,10 @@ a:hover {
     color: #bef8ab;
 }
 
+.others-hover:hover {
+    color: #c2d3b2;
+}
+
 @keyframes main-page-fadeIn {
     0% {
         opacity: 0;
